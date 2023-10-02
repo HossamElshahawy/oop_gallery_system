@@ -33,13 +33,19 @@
                     </ol>
                     <?php
 
-                    $sql = "SELECT * FROM users WHERE id=103";
-                    $result = $database->query($sql);
-                    $final = mysqli_fetch_array($result);
 
-                    echo $final[3];
+//                    $test= User::find_all_users();
+//                    while ($row = mysqli_fetch_array($test)) {
+//                        echo $row['0'] . "<br>";
+//                    }
 
-
+//                    $test = User::find_all_users();
+//                    foreach ($test as $te){
+//                       echo $te->id . "<br>";
+//
+//                    }
+                    $test = User::find_user_by_id(104);
+                    echo $test->first_name;
 
                     ?>
                 </div>
