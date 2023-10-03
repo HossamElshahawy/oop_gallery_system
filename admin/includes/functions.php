@@ -8,4 +8,8 @@ function classAutoLoader($class){
         include $path;
     }
 }
+
+function Redirect($location){
+    header("Location: {$location}");
+}
 spl_autoload_register('classAutoLoader');
